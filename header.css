@@ -1,0 +1,277 @@
+
+
+header {
+ display: grid;
+ grid-template-columns: minmax(min-content, 13vw) minmax(min-content, 1fr) 28vw;
+ column-gap: 2vw;
+ background-color: #373737;
+ margin: 0;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ border-top-right-radius: 3px;
+ border-top-left-radius: 3px;
+ z-index: 200;
+}
+
+.nav-toggle-icon-container {
+ display: none;
+ z-index: 300;
+}
+
+
+.badge {
+ display: flex;
+ align-items: center;
+ border-bottom: 0.5px solid rgba(230, 230, 230, 0.1);
+ padding-bottom: 11px;
+}
+
+.logo{
+ width: 4vw;
+ aspect-ratio: 1/1;
+ margin-right: 6px;
+ border-radius: 2px;
+}
+
+.badge p{
+ font-size: 1.8vw;
+ font-weight: 500;
+}
+
+.header-nav {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ border-bottom: 0.5px solid rgba(230, 230, 230, 0.1);
+}
+
+.overview, 
+.cards, 
+.system, 
+.account, 
+.business, 
+.payments {
+ font-size: 1.25vw;
+ font-weight: 500;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ text-decoration: none;
+ flex: 1;
+/*
+ border: 2px solid white;
+*/ 
+}
+.payments {
+ border-top: 1px solid white;
+ color: #ffffff;
+}
+
+.neobank,
+.header-nav a,
+.profile p{
+ color: rgba(255, 255, 255, 0.5);
+}
+
+.right-container {
+ display: flex;
+ align-items: center;
+ /*
+ background-color: blue;
+ */
+}
+
+
+.profile {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ padding-right: 16px;
+ border-right: 0.5px solid rgba(230, 230, 230, 0.1);
+ height: 100%;
+ /*
+ background-color: red;
+ */
+}
+
+.profile img{
+ width: 4vw;
+ aspect-ratio: 1/1;
+ border-radius: 2vw;
+ margin-left: 1.7vw;
+}
+
+.profile p {
+ align-content: center;
+ height: 100%;
+ font-size: 1.5vw;
+ border-bottom: 0.5px solid rgba(230, 230, 230, 0.1);
+}
+
+.notification-and-search-icons {
+ display: flex;
+ align-items: center;
+ padding-left: 1vw;
+ /*
+ background-color: red;
+ */
+}
+
+.icon {
+ margin-right: 1vw;
+ aspect-ratio: 1/1;
+ width: 2vw;
+ border: 1px solid white;
+ opacity: 0.5;
+ vertical-align: middle;
+ border-radius: 3vw;
+ background-color: #373737;
+ transition: background-color 0.2s, opacity 0.2s;
+ padding: 4px;
+}
+
+.icon:active {
+ background-color: white;
+ opacity: 1;
+ outline: 1px solid white;
+ outline-offset: 2px;
+}
+
+.notification-icon {
+ 
+}
+
+.button {
+/*
+ background-color: white;
+*/
+}
+
+
+
+@media(max-width: 700px){
+
+
+ header {
+  padding-left: 3vw;
+ }
+
+ .badge p{
+  font-size: 4vw;
+ }
+ 
+ .logo{
+  width: 8vw;
+ }
+ 
+ .nav-toggle-icon-container {
+  top: 6vw;
+  right: 3.5vw;
+ }
+ 
+ .nav-toggle-icon {
+  width: 5vw;
+ }
+ 
+}
+
+@media(max-width: 1000px){
+ 
+ 
+ 
+ 
+} 
+
+@media(min-width: 701px) and (max-width: 999px){
+ .nav-toggle-icon-container {
+  top: 4vw;
+  right: 6vw;
+ }
+}
+
+@media(min-width: 701px) and (max-width: 1199px){
+ header {
+  padding-left: 5vw;
+ }
+
+ .badge p{
+  font-size: 2.4vw;
+ }
+ 
+ .logo{
+  width: 4vw;
+ }
+ 
+ .nav-toggle-icon {
+  width: 3.5vw;
+ }
+ 
+}
+
+
+@media(min-width: 1000px) and (max-width: 1200px){
+ .header-nav,
+ .profile {
+ 
+ }
+ 
+ .nav-toggle-icon-container {
+  top: 3vw;
+  right: 7vw;
+ }
+ 
+ .nav-toggle-icon {
+  width: 4vw;
+ }
+}
+
+
+@media(max-width: 1200px){
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(230, 230, 230, 0.1);
+ } 
+ 
+ .badge {
+  border: none;
+ }
+ 
+ .header-nav,
+ .profile,
+ .notification-and-search-icons {
+  display: none;
+ }
+ 
+ .nav-toggle-icon-container {
+  display: inline;
+  position: absolute;
+ }
+ 
+ .nav-toggle-icon {
+  aspect-ratio: 1/1;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  padding: 2px;
+ }
+ 
+ .nav-toggle-icon:hover {
+  outline: 1px solid white;
+  outline-offset: 4px;
+ }
+ 
+ .nav-toggle-icon-container:hover + main nav {
+  display: block;
+ }
+}
+
+
+@media(min-width: 1200px){
+ header {
+  padding: 20px 0 0 5vw;
+ } 
+ 
+}
+
+
